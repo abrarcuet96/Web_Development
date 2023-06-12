@@ -1,0 +1,30 @@
+h1{
+    color:crimson;
+    background-color: blanchedalmond;
+    height: 50px;
+    width: 50%;
+}
+p{
+    color:blueviolet;
+    font-size: 25px;
+    font-weight: 900;
+    font-family:'Courier New', Courier, monospace
+}
+img{
+    width:100%;
+}
+#location{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: chartreuse;
+}
+.myself{
+    background-color:bisque;
+    color:blue;
+    width: 50%;
+}
+h1.myself{
+    font-size: 100%;
+}
+.varsity{
+    color: brown;
+}
