@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* double colon is used for pseudo element*/
+        h1::before{
+            content:"Hello ";
+            color: blueviolet;
+            font-size: 30px;
+            background-color: bisque;
+        }
+        h1::after{
+            content:" Bye";
+            color: blueviolet;
+            font-size: 30px;
+            background-color: bisque;
+        }
+        body{
+            counter-reset: section;
+        }
+        p::before{
+            counter-increment: section;
+            content: "Section " counter(section) ": ";
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo Class</h1>
+    <h1>Normal Class</h1>
+    <h1>Simple Class</h1>
+    <input name="email" type="text"><br>
+    <input name="password" type="text">
+    <ul>
+        <p>abrar</p>
+        <p>araf</p>
+        <p>isfar</p>
+        <p>humaira</p>
+        <p>mahira</p>
+        <p>deena</p>
+    </ul>
+    <a href="https://www.google.com/">GOOGLE</a><br>
+    <a href="https://www.facebook.com/">FACEBOOK</a><br>
+    <a href="https://www.youtube.com/">YOUTUBE</a>
+</body>
+</html>
