@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* to display in one line */
+            display: flex;
+            position: relative;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            padding-left: 5px;
+            margin: 5px;
+            background-color: steelblue;
+            border: 1px solid tomato;
+        }
+        .box-2{
+            /* w.r.t position of box-2
+            position: relative;
+            left: 50px; */
+
+            
+            position: absolute;
+            top: 50px; 
+            /* will move up */
+            left: 50px;
+            /* will move left */
+            
+        }
+        .box-3{
+            /* box-3 will move over box-2 */
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Position</h1>
+    <h3>More position</h3>
+    <section class="container">
+        <div class="box box-1">
+            <h3>box-1</h3>
+        </div>
+        <div class="box box-2">
+            <h3>box-2</h3>
+        </div>
+        <div class="box box-3">
+            <h3>box-3</h3>
+        </div>
+        <div class="box box-4">
+            <h3>box-4</h3>
+        </div>
+    </section>
+</body>
+</html>
