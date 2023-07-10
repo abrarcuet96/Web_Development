@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.test{
+    color: orange;
+    cursor: pointer;
+}
+/* use of flex */
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.box{
+    padding: 20px;
+    background-color: orange;
+    width: 120px;
+    
+    
+}
+.box-2{
+    background-color: yellow;
+}
+.box-3{
+    background-color: blueviolet;
+}
