@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* ................................... */
+/* navbar */
+.menu-container{
+    background-color: cyan;
+    padding: 20px;
+    color:black;
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.menus{
+    display: flex;
+}
+
+.logo-img{
+    width: 120px;
+}
+.list-item{
+    margin-right: 10px;
+    padding-right: 7px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.list-item:hover{
+    color: white;
+}
+
+/* ................................ */
+/* banner */
+.banner-container{
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    align-items: center;
+    background-image:url(../resources-1/images/background.png),linear-gradient(45deg ,cyan,blue);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-text{
+    padding: 100px;
+}
+.banner-img{
+    width: 300px;
+    padding: 100px;
+}
+.banner-title{
+    font-size: 55px;
+    font-weight: bold;
+}
+.banner-description{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.btn-primary{
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.btn-primary:hover{
+    background-color: cyan;
+
+}
+
+/* ........................ */
+/* About us */
+.about-heading{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 40px;
+
+}
+.about-container{
+    display: flex;
+    justify-content: space-around;
+    
+
+
+}
+.about-img{
+    width:300px;
+    padding-left: 200px;
+
+}
+
+.about{
+    padding-left: 400px;
+    padding-right: 100px;
+}
+.about-title{
+    margin-bottom: 15px;
+}
+.about-text{
+    margin-bottom: 15px;
+}
+
+/* ........................... */
+/* Service Section */
+.service-heading{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+.service-section{
+    background-image:url(../resources-1/images/background.png),linear-gradient(45deg ,blue,cyan);
+}
+.service-container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.service-logo{
+    width: 80px;
+}
+.box{
+    border: none;
+    border-radius: 10px;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.6);
+    background-color: aquamarine;
+    margin-right: 120px;
+    margin-left: 120px;
+    margin-bottom: 50px;
+    padding: 30px;
+}
+.service-logo, .service-title, .service-text{
+    margin: 15px;
+}
+.service-title{
+    font-weight: 600;
+}
+
+/* ............. */
+/* footer */
+.footer-section{
+    display: flex;
+    background-color: cyan;
+    justify-content: space-around;
+}
+.footer-logo{
+    width: 120px;
+}
+.footer-box{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+.footer-box li{
+    list-style: none;;
+}
+.footer-heading{
+    margin-bottom: 10px;
+}
+hr{
+    color: black;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer-copyright{
+    background-color: cyan;
+}
