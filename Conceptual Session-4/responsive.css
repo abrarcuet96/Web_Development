@@ -1,0 +1,35 @@
+@media screen and (max-width:576px){
+    .nav-container{
+        flex-direction: column;
+        
+    }
+    .nav-items-container{
+        flex-direction: column;
+        
+        
+        
+        
+    }
+    .nav-items-container a{
+        margin-top: 20px;
+    }
+    .nav-items-container .login-btn{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .logo-container{
+        justify-content: center
+    }
+    .banner-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner-img{
+        width: 100%;
+        padding: 5px; 
+    }
+    .banner-title{
+        text-align: center;
+    }
+ 
+}

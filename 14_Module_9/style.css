@@ -1,0 +1,147 @@
+/* work sans font applied to all */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Work+Sans:wght@400;600;700;800&display=swap');
+/* shared styles */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+.btn-primary{
+    background-color: tomato;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    color: aliceblue;
+    cursor: pointer;
+}
+.text-light-grey{
+    color: black;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 700;
+    color: blueviolet;
+}
+/* header styles */
+header{
+    background-color: aquamarine;
+    padding: 50px 240px;
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav>ul{
+    display: flex;
+}
+nav li{
+    list-style: none;
+    margin-right: 30px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+nav li a{
+    text-decoration: none;
+    color: black;
+}
+
+/* banner styles */
+header img{
+    
+    width: 100%;
+    
+}
+.banner-content{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+/* main styles */
+main{
+    max-width: 1440px;
+    margin: 70px auto;
+}
+
+/* teams style */
+.teams-container{
+    display: flex;
+    align-items: center;
+}
+.teams-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+}
+.teams-content{
+    padding-right: 70px;
+    padding-left: 70px;
+}
+
+.teams-description{
+    padding: 20px 0 20px 0;
+}
+
+/* facts styles */
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+}
+.facts-card-container .card{
+    border-radius: 8px;
+    border: 1px solid red;
+    text-align: center;
+    padding: 30px;
+    
+}
+.facts-card-container .card-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.facts-card-container .card-stats{
+    font-size: 2.8rem;
+    color: #424242;
+}
+
+
+/* responsive media query */
+@media screen and (max-width:576px){
+    header{
+        padding: 20px;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .teams-container,
+    .facts-card-container{
+        flex-direction: column-reverse;
+
+    }
+    .teams-img-container{
+        grid-template-columns: 1fr;
+    }
+    .teams-content, .facts-card-container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media screen and (min-width:576px) and (max-width:960px){
+    header{
+        
+        padding: 50px;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .teams-container{
+        flex-direction: column-reverse;
+
+    }
+}

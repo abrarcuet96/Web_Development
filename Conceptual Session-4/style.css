@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+/* nav styles */
+nav{
+    background-color: aquamarine;
+}
+.nav-container{
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.nav-items-container{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.nav-items-container a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav-items-container .login-btn{
+    color: black;
+    font-weight: 700;
+    background-color: tomato;
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.logo-container{
+    display: flex;
+    width: 50%;
+}
+.logo-container img{
+    width: 50px;
+    object-fit: cover;
+    margin-right: 2px;
+}
+.logo-container p{
+    font-size: 30px;
+}
+.hive-section{
+    color: tomato;
+}
+
+/* banner styles */
+.banner-container{
+    background-color: antiquewhite;
+    border-radius: 5px;
+    max-width: 1200px;
+    margin: 70px auto;
+    display: flex;
+}
+.banner-head{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.banner-img{
+    width: 50%;
+    padding: 5px;
+
+    
+}
+.banner-icons img{
+    width: 100%;
+}
+.banner-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.banner-title{
+    width: 250px;
+    padding-left: 8px;
+}
+.banner-icons{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+.banner-buttons .login-btn{
+    color: black;
+    font-weight: 700;
+    background-color: tomato;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.banner-buttons{
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+}
