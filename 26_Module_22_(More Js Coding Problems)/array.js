@@ -19,4 +19,17 @@ console.log(typeof student);
 console.log(Array.isArray(friends));
 console.log(typeof add);
 
+// to find anything inside an array:
 console.log(friends.includes(16));
+if(friends.indexOf(21)!==-1){
+    console.log('it is there')
+}
+else{
+    console.log('it is there');
+}
+
+
+// use concat to add arrays:
+const newFriends=[12,13,14,65];
+const allFriends= newFriends.concat(friends);
+console.log(allFriends);
