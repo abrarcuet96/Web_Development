@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM-Document Object Model</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        li {
+            color: tomato;
+        }
+
+        .fruits-container {
+            color: tomato;
+        }
+
+        #fruits-title {
+            color: black;
+        }
+
+        .important-places {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my DOM</h1>
+    </header>
+    <main id="main-container">
+        <section>
+            <h1>My Awesome DOM de baba</h1>
+            <ul>
+                <li>Jalali Set</li>
+                <li>Shafayet</li>
+                <li>Bonobash</li>
+            </ul>
+        </section>
+        <section class="fruits-container">
+            <h1 id="fruits-title">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Orange</li>
+                <li>Banana</li>
+            </ul>
+        </section>
+        <section id="places-container"  class="large-text">
+            <h1 id="places-title">Place I like to visit</h1>
+            <ul id="places-list">
+                <li class="important-places">Sundarban</li>
+                <li class="important-places">Bandarban</li>
+                <li>Kalaban</li>
+            </ul>
+        </section>
+    </main>
+    <script src="JS/dom.js"></script>
+    <script src="JS/append.js"></script>
+    <script>
+        // option-1:
+        const allHeadings = document.getElementsByTagName('h1');
+        for (const h1 of allHeadings) {
+            console.log(h1.innerText);
+        }
+        // option-2: getElementById
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText = 'Fruits changed by JS';
+        // option-3: getElementsByClassName
+        const places = document.getElementsByClassName('important-places');
+        for (const place of places) {
+            console.log(place.innerText);
+        }
+        // option-4: querySelector--> only first content
+        // option-5: querySelectorAll
+        const someLi = document.querySelectorAll('.fruits-container li');
+        for (const li of someLi) {
+            console.log(li.innerText);
+        }
+
+    </script>
+</body>
+
+</html>

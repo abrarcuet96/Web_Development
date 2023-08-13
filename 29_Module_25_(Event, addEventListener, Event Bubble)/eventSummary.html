@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summary</title>
+</head>
+
+<body>
+    <h1>Final DOM Event Handlers</h1>
+    <h3 id="handler-status">Default Text</h3>
+    <p id="input-text-display">Default Input Text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+    <br>
+    <br>
+    <button onclick="handleOnClick()">Handle Event by Add onclick Function</button>
+    <button id="event_listener">Handle Event by addEventListener</button>
+    <script>
+        //option:1
+        //<h3 id="handler-status">Default Text</h3>
+        //<button onclick="handleOnClick()">Handle Event by Add onclick Function</button>
+        function handleOnClick() {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Handled by function attached on onclick attribute';
+        }
+        //option:2
+        //<h3 id="handler-status">Default Text</h3>
+        //<button id="event_listener">Handle Event by addEventListener</button>
+        document.getElementById('event_listener').addEventListener('click', function () {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Text updated by add event listener button';
+        })
+        //option:2 recap
+        /* <p id="input-text-display">Default Input Text</p>
+            <input id="input-field" type="text"> [inputField]
+            <button id="btn-update">Update</button> */
+        document.getElementById('btn-update').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value; //taken an setted the value of input field.
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText;
+            inputField.value = '';
+        }) 
+    </script>
+</body>
+
+</html>
