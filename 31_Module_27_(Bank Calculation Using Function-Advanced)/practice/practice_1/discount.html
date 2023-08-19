@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-4xl">Discount on our product!!</h1>
+    </header>
+    <main>
+        <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src="bag.png" alt="Shoes" /></figure>
+            <div class="card-body">
+                <h2 class="card-title">Price: <span id="price-text">2000</span> Tk.</h2>
+                <div class="card-actions">
+                    <button id="discount-btn" class="btn btn-primary w-full">Apply 30%</button>
+                </div>
+                <p>Please pay: <span id="discount-text">0</span> Tk.</p>
+            </div>
+        </div>
+    </main>
+    <script src="discount.js"></script>
+</body>
+
+</html>

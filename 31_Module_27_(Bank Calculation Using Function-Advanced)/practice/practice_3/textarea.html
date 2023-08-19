@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <script src="https://kit.fontawesome.com/fd12cc4a21.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div  class="w-[500px] h-[500px] bg-[#06b6d4]">
+        <div class="text-center">
+            <h1 class="text-2xl font-semibold">My Text Editor</h1>
+        </div>
+        <div>
+            <div class="flex justify-between m-5">
+                <div>
+                    <button id="btn-bold"><i class="fa-solid fa-bold"></i></button>
+                    <button id="btn-italic"><i class="fa-solid fa-italic"></i></button>
+                    <button id="btn-underline"><i class="fa-solid abcfa-underline"></i></button>
+                </div>
+                <div>
+                    <button id="btn-left"><i class="fa-solid fa-align-left"></i></button>
+                    <button id="btn-center"><i class="fa-solid fa-align-center"></i></button>
+                    <button id="btn-justify"><i class="fa-solid fa-align-justify"></i></button>
+                    <button id="btn-right"><i class="fa-solid fa-align-right"></i></button>
+                </div>
+                <div>
+                    <input id="text-size" class="w-[40px]" type="number" name="" id="">
+                    <button id="btn-font-size"><i class="fa-solid fa-font"></i></button>
+                    <input id="text-color" type="color" name="" value="">
+                </div>
+            </div>
+            <div class="text-center">
+                <textarea id="text-field" class="w-[480px] h-[350px]" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="textarea.js"></script>
+</body>
+
+</html>
