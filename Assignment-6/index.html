@@ -11,63 +11,32 @@
     <script src="https://kit.fontawesome.com/fd12cc4a21.js" crossorigin="anonymous"></script>
 </head>
 
-<body class=" max-w-screen-2xl mx-auto">
-    <header>
+<body>
+    <header class=" bg-green-200 shadow-xl m-5 rounded-lg">
         <!-- navbar -->
         <nav>
-            <div class="navbar bg-base-100 flex justify-between">
-                <div>
+            <div class="text-center my-8 mx-8 flex items-center">
+                <div class="flex-1">
                     <img src="./resources/Logo.png" alt="">
                 </div>
-                <div>
-                    <a id="click-to-sort" onclick="clickedSort()" class="btn btn-ghost normal-case text-xl bg-slate-300">Sort by view</a>
+                <div class="flex-1 justify-center" id="click-to-sort">
                 </div>
-                <div>
+                <div class="flex-1 text-right" id="blog-view">
                     <a class="btn btn-ghost normal-case text-xl bg-[#FF1F3D] text-white">Blog</a>
                 </div>
             </div>
         </nav>
+    </header>
+    <main class="w-4/5 bg-emerald-100 rounded-lg shadow-2xl mx-auto p-5 mb-5">
         <!-- categories -->
         <section id="category-title">
-            <!-- <div  class="">
-                <a class="btn btn-ghost normal-case text-xl bg-[#FF1F3D] text-white">All</a>
-            </div> -->
         </section>
-    </header>
-    <main>
         <!-- cards -->
         <section id="category_cards">
-            <!-- <div class="">
-                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                <div class="card-body flex flex-row">
-                    <div class="w-24">
-                        <img src="resources/Icon.png" alt="">
-                    </div>
-                    <div>
-                        <h2 class="card-title font-bold">Building a Winning UX Strategy Using the Kano Model</h2>
-                        <div class="flex">
-                            <p>Abrar Haider</p>
-                            <div>
-
-                            </div>
-                        </div>
-                        <p>91K views</p>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="flex flex-col items-center justify-center">
-                <div>
-                    <img src="./resources/Icon.png" alt="">
-                </div>
-                <div>
-                    <h1>Oops!! Sorry, There is no content here</h1>
-                </div>
-            </div> -->
         </section>
     </main>
-    
     <script src="index.js"></script>
-    <script src="test.js"></script>
+    <script src="sort.js"></script>
 </body>
 
 </html>
