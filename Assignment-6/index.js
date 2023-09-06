@@ -1,10 +1,3 @@
-const isSort=(isTrue)=>{
-    selectCategoryCards(isTrue);
-}
-const clickedSort=()=>{
-    isSort('sorted');
-    // console.log('sorting started');
-}
 const selectCategory = async () => {
     const response = await fetch(`https://openapi.programming-hero.com/api/videos/categories`);
     const categoryToJson = await response.json();
@@ -26,15 +19,15 @@ const categoryTitle = (categories) => {
     });
 }
 
-const selectCategoryCards = async (id,isTrue) => {
+const selectCategoryCards = async (id, isTrue) => {
     const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`);
     const categoryCardToJson = await response.json();
     const categoryItems = categoryCardToJson.data;
     // console.log(categoryItems);
-    cardClick(categoryItems,isTrue);
+    cardClick(categoryItems, isTrue);
 
 }
-const cardClick = (categories,isTrue) => {
+const cardClick = (categories, isTrue) => {
     console.log(isTrue);
     const categoryCards = document.getElementById('category_cards');
     categoryCards.textContent = '';
@@ -52,7 +45,7 @@ const cardClick = (categories,isTrue) => {
         categoryCards.appendChild(div);
     }
     else {
-        if (isTrue == null) {
+        if (isTrue==null) {
             categories.forEach((category) => {
                 // console.log(category);
 
@@ -250,7 +243,14 @@ const cardClick = (categories,isTrue) => {
 // const isClicked = (isTrue) => {
 //     selectCategoryCards(isTrue);
 // }
-
+const isSort = (isTrue) => {
+    
+    selectCategoryCards(isTrue);
+}
+const clickedSort = () => {
+    isSort(true);
+    // console.log('sorting started');
+}
 
 
 selectCategory();
