@@ -11,9 +11,9 @@ const categoryTitle = (categories) => {
     categories.forEach((category) => {
         const categoryItems = document.getElementById('category-title');
         const div = document.createElement('div');
-        categoryItems.classList = `text-center my-8 flex justify-center gap-5`;
+        categoryItems.classList = `text-center my-8 flex flex-col lg:flex-row justify-center gap-5`;
         div.innerHTML = `
-    <a onclick="selectCategoryCards('${category.category_id}')" class="btn btn-ghost normal-case text-xl bg-[#FF1F3D] text-white">${category.category}</a>
+    <a onclick="selectCategoryCards('${category.category_id}')" class="w-40 btn btn-ghost normal-case text-xl bg-[#FF1F3D] text-white">${category.category}</a>
     `;
         categoryItems.appendChild(div);
     });
@@ -33,7 +33,7 @@ const sortView = (id) => {
     const div = document.createElement('div');
     categoryItems.classList = `text-center my-8 flex justify-center gap-5`;
     div.innerHTML = `
-    <a onclick="sortClick('${id}')" class="btn btn-ghost normal-case text-xl bg-slate-100 shadow-lg">Sort by view</a>
+    <a onclick="sortClick('${id}')" class="btn btn-ghost normal-case text-xl bg-slate-100 shadow-lg w-40">Sort by view</a>
     `;
     categoryItems.appendChild(div);
 }
@@ -82,7 +82,7 @@ const cardClick = (categories) => {
             const hours = parseInt(timeInSeconds / (24 * 360));
             const min = parseInt((parseFloat((timeInSeconds / (24 * 360)) - hours).toFixed(2)) * 60);
             const div = document.createElement('div');
-            categoryCards.classList = `grid grid-cols-4`;
+            categoryCards.classList = `grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4`;
             div.innerHTML = `<div class="w-[312px] h-96 card mx-auto my-5 shadow-xl">
                     <div class="relative">
                     <img class="w-[312px] h-[200px] rounded-lg" src="${category.thumbnail}" alt="" />
@@ -96,10 +96,10 @@ const cardClick = (categories) => {
                         </div>
                         <div>
                             <h2 class="card-title font-bold">${category.title}</h2>
-                            <div class="flex">
+                            <div class="flex items-center">
                                 <p>${category.authors[0].profile_name}</p>
                             <div>
-                            </div>${category.authors[0].verified ? `<i class="fa-solid fa-certificate"></i>` : ''} </div>
+                            </div>${category.authors[0].verified ? `<i class=" fa-solid fa-certificate"></i>` : ''} </div>
                             <p>${category.others.views} views</p>
                         </div>
                     </div>
