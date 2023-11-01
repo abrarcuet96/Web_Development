@@ -1,0 +1,62 @@
+ //Frontend-Server-Database//
+
+## Setting Up The Development Environment:
+
+# server side:
+1. mkdir server_name (যে ফোল্ডার এ কাজ করবো ঐখানে সার্ভার সাইডের ফাইল্টা বানাতে হবে)
+2. cd server_name
+3. npm init -y
+4. code .
+5. npm i express cors mongodb
+6. package.json > script > {
+"start": "node index.js",
+"dev": "nodemon index.js",
+}
+7. create index.js file
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+# index.js =>
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+// middleware: 
+app.use(cors());
+app.use(express.json());
+/Frontend থেকে যখন request করবো তখন সে request এর সাথে data দিয়ে দিতে পারি, এই কাজগুলো middleware এর মাধ্যমে করবো/
+
+const port = process.env.PORT || 5000; (কোন port এ কাজ করবো।)
+
+// Home route এ hit করার জন্যঃ
+app.get('/', (req, res) => {
+    res.send('CRUD is running');
+});
+
+app.listen(port, () => {
+    console.log(`App is running on port, ${port}`);
+})
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+8. npm run dev
+9. at website> localhost:5000
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+# frontend:
+1. mkdir server_name (যে ফোল্ডার এ কাজ করবো ঐখানে ফ্রন্টেন্ড সাইডের ফাইল্টা বানাতে হবে)
+2. cd server_name
+3. npm create vite@latest my-crud-project -- --template react
+4. cd my-crud-project
+5. npm install react-router-dom localforage match-sorter sort-by
+6. code .
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+# MongoDB:
+
+>> mongodb atlas > project > new project > name your project > click create > free > create
+>> copy and paste user_name and password as a comment in vscode server side.
+>> finish and close > go to overview
+>> network access > add IP address > allow access from anywhere > confirm
+>> Database > Connect > Drivers > View full code sample > copy the code and paste in server side vscode.
+>> paste user_name and password in uri
+
+
