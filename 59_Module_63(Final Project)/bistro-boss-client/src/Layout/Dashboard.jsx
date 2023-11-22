@@ -18,6 +18,9 @@ const Dashboard = () => {
                                 <NavLink to="/dashboard/adminHome"><FaHome></FaHome>Admin Home</NavLink>
                             </li>
                             <li>
+                                <NavLink to="/dashboard/cart"><FaShoppingCart></FaShoppingCart>My Cart({cart.length})</NavLink>
+                            </li>
+                            <li>
                                 <NavLink to="/dashboard/addItems"><FaUtensils></FaUtensils>Add Items</NavLink>
                             </li>
                             <li>
@@ -29,6 +32,9 @@ const Dashboard = () => {
                             <li>
                                 <NavLink to="/dashboard/users"><FaUsers></FaUsers>All Users</NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/dashboard/paymentHistory"><FaBookmark></FaBookmark>Payment History</NavLink>
+                            </li>
                         </> : <>
                             <li>
                                 <NavLink to="/dashboard/cart"><FaShoppingCart></FaShoppingCart>My Cart({cart.length})</NavLink>
@@ -37,13 +43,13 @@ const Dashboard = () => {
                                 <NavLink to="/dashboard/userHome"><FaHome></FaHome>User Home</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/reservation"><FaCalendar></FaCalendar>Reservation</NavLink>
+                                <NavLink to="/dashboard/history"><FaCalendar></FaCalendar>Reservation</NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/review"><FaStar></FaStar>Add a review</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/bookings"><FaBookmark></FaBookmark>My Bookings</NavLink>
+                                <NavLink to="/dashboard/paymentHistory"><FaBookmark></FaBookmark>Payment History</NavLink>
                             </li>
                         </>
                     }
