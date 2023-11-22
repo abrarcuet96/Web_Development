@@ -1,9 +1,36 @@
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../../../Providers/AuthProvider";
+import { FaShoppingCart } from "react-icons/fa";
+import useCart from "../../../../Hooks/useCart";
+
 const NavBar = () => {
-    const navLinks = <>
-    <li>Home</li>
-    </>
+    const { user, logOut } = useContext(AuthContext);
+    const [cart]= useCart();
+    console.log(user);
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(err => console.log(err));
+    }
+    const navLinks = <div className="flex text-center justify-center items-center">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/menu">Our Menu</Link></li>
+        <li><Link to="/order/salad">Order Food</Link></li>
+        <li><Link to="/secret">Secret</Link></li>
+        {
+            user ? <li>
+                <Link to='/dashboard/cart'>
+                    <div className="flex text-center justify-center items-center">
+                        <FaShoppingCart className="mr-2"></FaShoppingCart>
+                        <p>+{cart.length}</p>
+                    </div>
+                </Link>
+            </li> : ''
+        }
+    </div>
     return (
-        <div className="navbar fixed z-10 bg-opacity-50 bg-black text-white max-w-screen-xl">
+        <div className="navbar fixed z-10 bg-opacity-80 bg-black text-white max-w-screen-xl">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -21,7 +48,17 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                {
+                    user ? <>
+                        <div className="flex gap-2 text-center justify-center items-center">
+                            <p>{user?.displayName}</p>
+                            <img className="w-[30px] rounded-full" src={user?.photoURL} alt="" />
+                            <button onClick={handleLogOut}>LogOut</button>
+                        </div>
+                    </> : <>
+                        <button><Link to="/login" >Login</Link></button>
+                    </>
+                }
             </div>
         </div>
     );

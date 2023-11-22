@@ -5,7 +5,7 @@ const MenuItem = ({item}) => {
             <img style={{borderRadius: '0 200px 200px 0'}} className="w-[100px]" src={image} alt="" />
             <div>
                 <h3 className="uppercase font-semibold text-orange-500">{name}</h3>
-                <p className="font-semibold">{recipe}</p>
+                <p className="font-semibold text-white">{recipe}</p>
             </div>
             <p className="text-orange-500 font-semibold">${price}</p>
         </div>

@@ -1,0 +1,8 @@
+1. set location of the current page in the Private route by use state.
+    //<Navigate to="/login" state={{from: location}} replace></Navigate>//
+2. at Login page: 
+    const navigate= useNavigate();
+    const location= useLocation();
+    const from= location.state?.from?.pathname || "/";
+
+    //navigate(from, {replace: true});//
