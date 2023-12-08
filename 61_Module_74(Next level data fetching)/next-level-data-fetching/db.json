@@ -1,0 +1,40 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Introduction to JSON",
+            "description": "JSON, or JavaScript Object Notation, is a lightweight data interchange format. It is easy for humans to read and write. In this post, we explore the basics of JSON.",
+            "like_count": 2000
+        },
+        {
+            "id": 2,
+            "title": "Web Development Trends 2023",
+            "description": "Discover the latest trends in web development for the year 2023. From new programming languages to emerging frameworks, stay ahead of the curve in the dynamic world of web development.",
+            "like_count": 42
+        },
+        {
+            "id": 3,
+            "title": "The Art of Coding",
+            "description": "Coding is not just about syntax; it's an art form. Learn how to express yourself through code and embrace the creativity that comes with building software solutions.",
+            "like_count": 36
+        },
+        {
+            "id": 4,
+            "title": "Machine Learning for Beginners",
+            "description": "Dive into the exciting world of machine learning. This beginner-friendly guide covers the fundamentals, common algorithms, and practical applications, making ML accessible to everyone.",
+            "like_count": 18
+        },
+        {
+            "id": 5,
+            "title": "Exploring the Cosmos: Space Travel 101",
+            "description": "Embark on a journey through the cosmos and explore the basics of space travel. From rocket science to celestial navigation, this post is your guide to the wonders of the universe.",
+            "like_count": 56
+        },
+        {
+            "id": 6,
+            "title": "Healthy Living: Mind, Body, and Soul",
+            "description": "Discover the keys to a holistic and healthy lifestyle. This post covers nutrition, exercise, mindfulness, and self-care practices to help you achieve balance in mind, body, and soul.",
+            "like_count": 63
+        }
+    ]
+}
